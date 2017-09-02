@@ -37,11 +37,13 @@ if __name__ == "__main__":
     job_1 = fast_spliter.delay("Road runner is super fast")
     time.sleep(3)
     print("Job status: ", job_1.status)
+    print("Job Result", job_1.get())
 
     print("\nCalling fast_spliter() ... ")
     job_2 = slow_spliter.delay("Slothes enjoy being slow")
     time.sleep(3)
     print("Job status: ", job_2.status)
+    print("Job Result", job_2.get())
 
 
 
